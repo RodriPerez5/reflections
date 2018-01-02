@@ -1,0 +1,112 @@
+GIT was created by Linus Torvalds! in 2005, and IS A TOOL TO MAKE PROGRAMMING EASIER, SPECIALLY WHEN THE CODE IS LARGE.
+
+
+
+
+
+            How did viewing a diff between two versions of a file help you see the bug that
+            was introduced?
+
+              COMANDO:  diff -u <UnProgramaGuardado> <OtroProgramaGuardado>   --> {DIFFerence}COMPARA DOS CÓDIGOS
+              DE UN PROGRAMA GUARDADOS EN DISTINTAS CARPETAS Y NOS MUESTRA QUE ES LO QUE HEMOS CAMBIADO. MUY ÚTIL
+              PARA ENCONTRAR AQUELLO QUE HACE QUE NO FUNCIONE BIEN EL NUEVO PROGRAMA.
+
+              COMANDO: git diff <UnaVersionDelPrograma> <OtraVersionDelPrograma>   --> IDEM, SOLO QUE COMPARA DOS CÓDIGOS DE UN
+              MISMO PROGRAMA "COMMITEADO".
+
+
+
+
+
+            How could having easy access to the entire history of a file make you a more
+            efficient programmer in the long term?
+
+                EL 'CONTROL DE VERSIONES' SIGNIFICA QUE SE VA HACIENDO COPIAS DE SEGURIDAD CADA
+                TANTO, Y LUEGO SE LAS PUEDE RECUPERAR. MUY ÚTIL POR SI NOS MANDAMOS ALGUNA, Y PARA TENER UN HISTORIAL DE
+                COMO HA IDO EVOLUCIONANDO NUESTRO PROGRAMA EN SUS DISTINTAS "VERSIONES".
+                  (Dropbox, Google Drive, Wikipedia, Git, son tipos de control de versiones)
+
+
+
+
+
+
+            What do you think are the pros and cons of manually choosing when to create a
+            commit, like you do in Git, vs having versions automatically saved, like Google
+            docs does?
+
+                ES MEJOR HACER LOS COMMITS(es decir guardar el programa) MANUALMENTE CUANDO SE HAYA HECHO UN CAMBIO IMPORTANTE
+                SINO HABRÁN MUCHOS COMMITS Y SERÍA MUY TEDIOSO ENCONTRAR EL QUE QUEREMOS. UNA COSA BUENA ES QUE GIT NOS
+                OBLIGA A PONER COMENTARIOS DE QUE CAMBIO HICIMOS, TAMBIÉN PARA QUE NO SEA TEDIOSO.
+
+
+
+
+
+
+
+            Why do you think some version control systems, like Git, allow saving multiple
+            files in one commit, while others, like Google Docs, treat each file separately?
+
+                PORQUE GIT MANEJA LENGUAJES DE PROGRAMACIÓN, Y LOS PROGRAMAS SE SUELEN DIVIDIR EN PARTES Y SER GUARDADOS EN
+                CARPETAS DEPENDIENTES ENTRE SÍ [UN GRUPO DE ESTAS CARPETAS EN GIT SE LLAMA: REPOSITORY]. POR LO QUE LOS
+                COMMITS ACTÚAN SOBRE TODAS LAS CARPETAS DEPENDIENTES POR MÁS QUE SOLO SE HAYA MODIFICADO UNA.
+                  Y EL COMANDO: git diff <VersionDeUnaDeLasCarpetasDependientes> <OtraVersionDeUnaDeLasCarpetasDependientes>
+                SIEMPRE MUESTRA TODAS LAS CARPETAS DEPENDIENTES
+
+
+
+                  COMANDO:  git clone <url>   --> COPIA EL REPOSITORIO DE UNA COMPUTADORA A OTRA
+
+                  COMANDO:  git config --global colour.ui auto  --> CON CONFIG ENTRAMOS A LAS CONFIGURACIONES DE GIT.
+                  CON --GLOBAL LE DECIMOS QUE LA CONFIGURACIÓN SE HAGA EN TODOS LOS GIT QUE CREEMOS Y NO SOLO EN EL ACTUAL.
+                  CON colour.ui auto LE DAMOS COLOR AL TEXTO DE LA TERMINAL AL USAR GIT
+
+
+
+
+
+            How can you use the commands git log and git diff to view the history of files?
+
+                 COMANDO:  git log --stat    --> log NOS MUESTRA TODOS LOS COMMITS DE UN PROGRAMA. CON --stat ADEḾAS NOS MUESTRA
+                 LA CANTIDAD DE FILES MODIFICADOS, Y LA CANTIDAD DE INSERTIONS AND DELETIONS
+                   Nota: No suele mostrar todos los commits en la terminal por ser muchos. Para verlos todos hay que bajar con
+                         enter o la flechita hacia abajo.
+
+Nota: para salir de los comandos diff y log hay que presionar: 'q'
+
+
+
+
+
+
+
+            How might using version control make you more confident to make changes that
+            could break something?
+
+                COMANDO: git checkout <NombreDelCommit>   --> CAMBIA NUESTRO PROGRAMA A LA VERSION DE ESE COMMIT. LUEGO DE
+                CORRER ESTE COMANDO, AL EJECUTAR NUESTRO PROGRAMA LO EJECUTA CON EL CÓDIGO DE ESE COMMIT, Y ASÍ PODEMOS
+                CHEKEAR EN QUE COMMIT NOS LA MANDAMOS. (Luego, además usamos diff para encontrar en que parte del commit
+                exactamente nos la mandamos)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
