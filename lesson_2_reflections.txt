@@ -1,0 +1,82 @@
+
+            What happens when you initialize a repository? Why do you need to do it?
+
+              CUANDO INICIALIZAMOS UN NUEVO REPOSITORIO GIT, ESTE SE ENCUENTRA SIN NINGÚN COMMIT Y SOLO POSEE EL ARCHIVO OCULTO .git
+              COMANDO:  git init   --> INICIALIZAMOS UN NUEVO REPOSITORIO GIT
+              COMANDO:  git status   --> COMO NO HAY COMMITS, ENTONCES NO SIRVE EL COMANDO git log. POR LO QUE PARA VER SI UN
+              REPOSITORIO ES GIT, USAMOS EL COMANDO git status EL CUAL ES MUY USADO YA QUE NOS MUESTRA QUE FILES HAN CAMBIADO DESDE
+              EL ÚLTIMO COMMIT.
+
+
+
+
+
+            How is the staging area different from the working directory and the repository?
+            What value do you think it offers?
+
+               PARA AGREGAR COMMITS DE UNA O MÁS DE FILES DE NUESTRO WORKING DIRECTORY(GIT DIRECTORY) A EL REPOSITORIO DE GIT,
+               ANTES DEBEMOS AGREGARLA A UN AREA INTERMEDIA LLAMADA:  "STAGE AREA", ESTA SIRVE PARA COMITEAR SOLO AQUELLAS FILES
+               QUE QUEREMOS COMITEAR Y EN UN ÚNICO COMMIT.
+               COMANDO:  git add <NombreDeUnaFile>
+
+
+
+
+
+            How can you use the staging area to make sure you have one commit per logical
+            change?
+
+              COMANDO:  git commit
+              git commit -m "Commit message"
+
+
+
+
+            What are some situations when branches would be helpful in keeping your history
+            organized? How would branches help?
+
+
+
+
+            How do the diagrams help you visualize the branch structure?
+
+
+
+
+            What is the result of merging two branches together? Why do we represent it in
+            the diagram the way we do?
+
+
+
+            What are the pros and cons of Git's automatic merging vs. always doing merges
+            manually?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
