@@ -1,11 +1,12 @@
 
             What happens when you initialize a repository? Why do you need to do it?
 
-              CUANDO INICIALIZAMOS UN NUEVO REPOSITORIO GIT, ESTE SE ENCUENTRA SIN NINGÚN COMMIT Y SOLO POSEE EL ARCHIVO OCULTO .git
-              COMANDO:  git init   --> INICIALIZAMOS UN NUEVO REPOSITORIO GIT
-              COMANDO:  git status   --> COMO NO HAY COMMITS, ENTONCES NO SIRVE EL COMANDO git log. POR LO QUE PARA VER SI UN
-              REPOSITORIO ES GIT, USAMOS EL COMANDO git status EL CUAL ES MUY USADO YA QUE NOS MUESTRA QUE FILES HAN CAMBIADO DESDE
-              EL ÚLTIMO COMMIT.
+              CUANDO INICIALIZAMOS UN NUEVO REPOSITORIO GIT, ESTE SE ENCUENTRA SIN NINGÚN COMMIT Y SOLO POSEE EL ARCHIVO
+              OCULTO .git
+             COMANDO:  git init   --> INICIALIZAMOS UN NUEVO REPOSITORIO GIT
+             COMANDO:  git status   --> COMO NO HAY COMMITS, ENTONCES NO SIRVE EL COMANDO git log. POR LO QUE PARA VER SI UN
+              REPOSITORIO ES GIT, USAMOS EL COMANDO git status EL CUAL ES MUY USADO YA QUE NOS MUESTRA QUE FILES HAN CAMBIADO
+              DESDE EL ÚLTIMO COMMIT.
 
 
 
@@ -17,8 +18,24 @@
                PARA AGREGAR COMMITS DE UNA O MÁS DE FILES DE NUESTRO WORKING DIRECTORY(GIT DIRECTORY) A EL REPOSITORIO DE GIT,
                ANTES DEBEMOS AGREGARLA A UN AREA INTERMEDIA LLAMADA:  "STAGE AREA", ESTA SIRVE PARA COMITEAR SOLO AQUELLAS FILES
                QUE QUEREMOS COMITEAR Y EN UN ÚNICO COMMIT.
-               COMANDO:  git add <NombreDeUnaFile>
+              COMANDO:  git add <NombreDeUnaFile>
 
+
+
+
+              COMANDO:  git commit   --> ABRE EL EDITOR DE TEXTO QUE CONFIGURAMOS PARA SER USADO EN GIT, EN DONDE ESCRIBIMOS EL
+               MENSAJE DEL COMMIT DE AQUELLA/S FILE/S QUE SE ENCUENTRA/N EN LA STAGE AREA. OJO AL GUARDAR HAY QUE PONER GUARDAR
+               COMO Y SOBREESCRIBIR LA CARPETA:  .git/COMMIT_EDITMSG  SINO NO PASA NADA. REVISARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+              COMANDO:  git commit -m "Commit message"  -->COMENTA DIRECTAMENTE DE LA TERMINAL SIN NUNCA ABRIR UN EDITOR DE TEXTO,
+               NO ES CÓMODO SI TENEMOS QUE ESCRIBIR DETALLES EN EL MENSAJE DEL COMMIT.
+
+
+
+
+              COMANDO: git diff   --> NOS MUESTRA LA DIFERENCIA ENTRE EL PROGRAMA ACTUAL, Y EL PROGRAMA QUE SE ENCUENTRA EN
+               LA STAGE AREA.
+              COMANDO: git diff --staged   --> NOS MUESTRA LA DIFERENCIA ENTRE EL PROGRAMA QUE SE ENCUENTRA EN LA STAGE AREA,
+               Y EL PROGRAMA COMITEADO MÁS RECIENTE.
 
 
 
@@ -26,8 +43,10 @@
             How can you use the staging area to make sure you have one commit per logical
             change?
 
-              COMANDO:  git commit
-              git commit -m "Commit message"
+               AGREGANDO SOLO LAS FILES QUE QUIERO COMITEAR AL STAGE AREA
+
+
+
 
 
 
@@ -35,10 +54,40 @@
             What are some situations when branches would be helpful in keeping your history
             organized? How would branches help?
 
+               EN LA HISTORIA DE LOS COMMITS, LAS RAMAS SIRVEN PARA BIFURCAR UN PROGRAMA EN DOS O MÁS VERSIONES DEL MISMO.
+               LO CUAL ES MUY ÚTIL PARA TENER SIEMPRE UNA VERSIÓN MÁSTER DEL PROGRAMA QUE PODRÍA SIEMPRE ESTAR FUNCIONANDO,
+               Y A LA PAR VAMOS A TENER OTRAS VERSIONES (O RAMAS) EN DONDE PODEMOS HACER PRUEBAS DEL MISMO PROGRAMA SIN NUNCA
+               HACERLO DEJAR DE FUNCIONAR.
+
+
+
+
+
+               COMANDO: git checkout -b <NewBranchName>   --> ES LO MISMO QUE HACER: git branch <NewBranchName>
+                                                                                     git checkout <NewBranchName>
+
+
+
+
+
 
 
 
             How do the diagrams help you visualize the branch structure?
+
+              COMANDO: git log --graph --oneline   --> NOS MUESTRA EL MAPA LOS COMMITS (DEL MÁS RECIENTE AL MENOS RECIENTE)
+               PERO SOLO NOS MUETRA EL CAMINO DE LA BRANCH EN LA QUE NOS ENCONTRAMOS, NO VEMOS NINGUNA OTRA BRANCH!
+               --oneline ES SIMPLEMENTE PARA SIMPLIFICAR EL MAPA.
+              COMANDO: git log --graph --oneline <NombreDeUnaBranch> <NombreDeOtraBranch> <NombreDeEtceteraBranch>  --> ESTO
+               NOS MUESTRA EL MAPA CON TODAS LAS BRANCH QUE INCLUYAMOS.
+
+
+
+
+
+
+            GIT'S GARBAGE COLLECTIONS: CUANDO SE ELIMINA UNA BRANCH (O COMMITS), PUEDE QUE TODAVÍA PODAMOS ACCEDER A LOS COMMITS
+            MEDIANTE SUS ID. PERO SOLO HASTA QUE CORRA EL COLECTOR DE BASURA DE GIT EL CUAL PASA DE TANTO EN TANTO.
 
 
 
@@ -46,10 +95,36 @@
             What is the result of merging two branches together? Why do we represent it in
             the diagram the way we do?
 
+              GIT AUTOMÁTICAMENTE FUSIONA LAS RAMAS.
+              QUE TAN PRO PUEDE SER ESTA AUTOMATIZACIÓN!????????????????????????????????????????????????????????
+
+
+
+              COMANDO: git merge <NombreDeLaBranch1AFusionar> <NombreDeLaBranch2AFusionar> <Etc>  -->OJO! PARA FUSIONAR RAMAS,
+               ANTES DEBEMOS HACER CHECK OUT EN LA RAMA CUYA ETIQUETA QUEREMOS QUE SEA LA ETIQUETA DE EL NUEVO COMMIT FUSIONADO.
+               NOTA: EN EL COMANDO NO HACE FALTA COLOCAR LA ETIQUETA(CHECKED OUT) EN LA QUE ESTAMOS PARADOS.
+
+              COMANDO: git show <CommitID>   --> ES LO MISMO QUE HACER git diff <CommitID> <CommitID_DelPadre> CON LA VENTAJA DE
+               QUE NO NECESITAMOS CONOCER QUIEN CUAL ES EL COMMIT PADRE. MUY UTIL CUANDO HEMOS HECHO BRANCHES.
+
+              COMANDO: git branch -d <NombreDeLaRama>   --> ESTE COMANDO ELIMINA LA ETIQUETA DE UNA RAMA, NO ELIMINA SUS COMMITS,
+               LOS CUALES AHORA SON ALCANZABLES DESDE LA RAMA MASTER
+
+
+
+
+
+              COMANDO: git merge --abort   --> DESHACE LA ÚLTIMA FUSIÓN HECHA
+
+
+
 
 
             What are the pros and cons of Git's automatic merging vs. always doing merges
             manually?
+
+              GIT AUTOFUSIONA SOLO CUANDO ESTÁ SEGURO, ES DECIR, CUANDO LAS RAMAS A FUSIONAR NO HAN MODIFICADO MISMAS
+              LÍNEAS DE CÓDIGO DE SU PADRE COMÚN.
 
 
 
