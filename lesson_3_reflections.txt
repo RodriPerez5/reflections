@@ -1,0 +1,44 @@
+          
+          COMANDO:  git remote   --> NOS MUESTRA LOS REMOTES QUE HEMOS CREADO. ES CASI LO MISMO QUE git branch SOLO QUE NO
+           TIENE UN MASTER.
+          COMANDO: git remote add <NomreDelRemote> <URL>  --> CREAMOS UN REMOTE. AL PRIMER REMOTE SE LO SUELE LLAMAR:  origin
+          COMANDO: git remote -v  --> ESTO ES PARA VERIFICAR QUE LA URL INGRESADA ES CORRECTA (-v standS for Verbose: using or
+           containing more words than are necessary). ESTE COMANDO NOS MUESTRA LA DIRECCIÓN(URL) DE DONDE VAMOS A BUSCAR[FECTH]
+           LOS DATOS Y LA DIRRECION(URL pasted) A DONDE VAMOS A ENVIAR[PUSH] DATOS, LAS CUALES EN LA MAYORÍA DE LOS CASOS VAN A
+           SER LAS MISMAS URL.
+          COMANDO:  git push <NomreDelRemote> <NombreDeLaBranch> --> PARA ENVIAR UNA BRANCH AL REMOTE CREADO EN GITHUB
+          
+          
+          
+When would you want to use a remote repository rather than keeping all your work local?
+   
+   CUANDO QUIERO COMPARTIR UN PROGRAMA CON OTRAS PERSONAS, Y CUANDO QUIERO TENER UNA COPIA
+   SEGURIDAD DE MIS COMMITS EN LA NUBE.
+
+
+
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
+
+    Fill in your answer here
+
+Describe the differences between forks, clones, and branches.  When would you
+use one instead of another?
+
+    Fill in your answer here
+
+What is the benefit of having a copy of the last known state of the remote
+stored locally?
+
+    Fill in your answer here
+
+How would you collaborate without using Git or GitHub?  What would be easier,
+and what would be harder?
+
+    Fill in your answer here
+
+When would you want to make changes in a separate branch rather than directly in
+master?  What benefits does each approach have?
+
+    Fill in your answer here
+
